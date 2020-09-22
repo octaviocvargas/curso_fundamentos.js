@@ -1,0 +1,16 @@
+{
+  "name": "fundamentos",
+  "version": "1.0.0",
+  "description": "recursos del curso Fundamentos javaScript",
+  "main": "\u001b[D\u001b[D\u001b[D\u001b[B\u001bhtml) src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Platzi",
+    "fundamentos",
+    "js"
+  ],
+  "author": "Octavio Cuellar Vargas",
+  "license": "MIT"
+}
