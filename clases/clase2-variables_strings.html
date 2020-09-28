@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Clase 1 - Variables</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="../imagenes/logo-platzimaster.png" alt="Logo">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../imagenes/js.png" alt="User">
+      </div>
+    </div>
+  </header>
+
+  <section class="concept">
+    <section class="concept__container">
+        <h2>VARIABLES STRINGS</h2>
+            <p class="concept__container--text">Los STRINGS son cadenas de texto. Es posible invocar funciones directamente sobre las variables, conocidos como métodos. En los <em>STRINGS</em> tenemos lo siguientes métodos: </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var nombre = 'Octavio', var apellido = 'Cuellar'
+                </code>
+            </blockquote> 
+
+              <p class="concept__container--text">
+            <code class="concept__container--code">toUpperCase()</code> → nos permite cambiar las letras de un <em>string</em> en mayuscula.
+              </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                  var nombreEnMayuscula = nombre.toUpperCase()
+                  <br>
+                  nombreEnMayuscula = 'OCTAVIO'
+            </blockquote>
+              
+            <p class="concept__container--text">
+                <code class="concept__container--code">toLowerCase()</code> → nos permite cambiar las letras de un <em>string</em> en minuscula.
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                      var nombreEnMayuscula = nombre.toLowerCase()
+                      <br>
+                      nombreEnMayuscula = 'octavio'
+                </blockquote>
+
+            <p class="concept__container--text">
+                <code class="concept__container--code">chartAr()</code> → nos permite conocer que letra o caracter se encuentra en la posición que le indiquemos. Dentro del paréntesis introducimos un parámetro numérico que determinará que posición del string queremos conocer.
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                    var primeraLetraDelNombre = nombre.chartAr(0)
+                    <br>
+                    primeraLetraDelNombre = 'O'
+                </blockquote>
+
+            <p class="concept__container--text">
+                <code class="concept__container--code">length()</code> → es un atributo que nos permite conocer la cantidad de caracteres de los que está compuesto un string. El tipo de valor que obtenemos es numérico no de tipo string como sucedía con <code class="concept__container--code">chartAr()</code>
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                    var cantidadDeLetrasDelNombre = nombre.length
+                    <br>
+                    cantidadDeLetrasDelNombre = 7
+                </blockquote>
+
+            <p class="concept__container--text">
+                <code class="concept__container--code">concatenación()</code> → es posible unir strings alojados en diferentes variables en una misma variable:
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                    var nombreCompleto = nombre + ' ' + apellido
+                    <br>
+                </blockquote>
+
+            <p class="concept__container--text">
+                Hay otra forma más nueva de concatenar strings, tiende a ser un poco más clara. Se llama <em>INTERPOLACIÓN DE TEXTO</em>. se usa el signo peso <em>$</em>, los corchetes <em>{}</em> (dentro de estas llaves podemos escribir código javascript) y un caracter especial, la comilla invertida <code class="concept__container--code">` `</code> estas comillas invertidas nos permite <em>Interpolar Variables</em>. Funciona de la siguiente manera:
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                    var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
+                    <br>
+                </blockquote>
+
+            <p class="concept__container--text">
+                Una cosa más que podemos hacer con los STRINGS es acceder a un <em>SUB-STRING</em> a un string más pequeño. Lo hacemos con la función <code class="concept__container--code">str</code>
+            </p>
+
+                <blockquote>
+                    <code class="concept__container--code">
+                    var str = nombre.substr(1, 2)
+                    <br>
+                    str = 'ct'
+                </blockquote>
+
+            <section class="concept_container--social-media">
+                <div><img src="../imagenes/twitter-icon.png" alt="Twitter"><a href="https://twitter.com/octaviocvargas">octaviocvargas</a></div>
+            </section>
+            
+        </section>
+    </section>
+<footer class="footer">
+<a href="/">Términos de uso</a>
+<a href="/">Declaración de privacidad</a>
+<a href="/">Centro de ayuda</a>
+</footer>
+
+  <script src="../js/clase1-variables.js"></script>
+
+</body>
+</html>

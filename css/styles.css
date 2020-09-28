@@ -133,6 +133,14 @@ body {
   .carrousel-item__details--title:hover {
             opacity: 1;
   }
+  .carrousel-item__details--title a {
+    text-decoration: none;
+    color: white;
+}
+.carrousel-item__details--title a:hover {
+  text-decoration: underline;
+  color: white;
+}
   .carrousel-item__details--subtitle:hover {
             opacity: 1;
   }
