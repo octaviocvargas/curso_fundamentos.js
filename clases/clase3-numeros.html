@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Clase 2 - VariablesStrings</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="../imagenes/logo-platzimaster.png" alt="Logo">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../imagenes/js.png" alt="User">
+      </div>
+    </div>
+  </header>
+
+  <section class="concept">
+    <section class="concept__container">
+        <h2>VARIABLES STRINGS</h2>
+            <p class="concept__container--text">Anteriormente hablamos de textos en javaScript, ahora es momento de hablar de números y las operaciones más comunes:</p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var edad = 32
+                </code>
+            </blockquote> 
+
+            <h3>OPERADORES DE ASIGNACIÓN</h3>
+
+            <p class="concept__container--text">
+                <ul>
+                    <li> = → Asigna un valor a una variable</li>
+                    <li> += → Operador de incremento</li>
+                    <li> -= → Operador de decremento</li>
+                    <li> *= → Operador de multiplicación</li>
+                    <li> /= → Operador de división</li>
+                </ul>
+            </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    edad += 1
+                    <br>
+                    var peso = 75
+                    <br>
+                    peso -= 2
+                    <br>
+                    Peso → 73
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Por ejemplo, comer un sandwich aumenta 1 kilo de peso:</p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var sandwich = 1
+                    <br>
+                    peso += sandwich
+                    <br>
+                    Peso → 74
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Otro ejemplo, sería que jugar futbol disminuye 3 kilos:</p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var jugarFutbol = 3
+                    <br>
+                    peso -= jugarFutbol
+                    <br>
+                    Peso → 74
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Ahora vamos a ver el precio de un vino que vale $200.3, suponiendo que voy a llevar 3 unidades</p>
+            
+            <blockquote>
+                <code class="concept__container--code">
+                    var precioDeVino = 200.3
+                    <br>
+                    var total = precioDeVino * 3
+                    <br>
+                    >600.9000000000001
+                </code>
+            </blockquote> 
+
+            <em>La manera de almacenar decimales de javaScript no es tan precisa, debido a que destina cierta cantidad de bites en la memoria ram de la computadora para asignar un decimal por lo que no termina de ser tan preciso.</em>
+
+            <p class="concept__container--text">Para solucionar este problema debemos hacer los siguiente accedemos al modulo global de matematicas de javaScript <strong>Math</strong></p>
+
+            <em>Si queremos 'x' cantidad de numeros decimales usamos <strong>total.toFixed()</strong> que viene siendo un string. Si queremos pasarlo de nuevo a numero decimal, lo hacemos con <strong>parseFloat()</strong></em>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var precioDeVino = 200.3
+                    <br>
+                    var total = Math.round(precioDeVino * 100 * 3) / 100
+                    <br>
+                    var totalStr = total.toFixed(3)
+                    <br>
+                    vat total2 = parseFloat(totalStr)
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Por último vamos a hacer una división</p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var pizza = 8
+                    <br>
+                    var personas = 2
+                    <br>
+                    var cantidadDePorcionesPorPersonas = pizza / personas
+                    <br>
+                    vat total2 = parseFloat(totalStr)
+                </code>
+            </blockquote> 
+
+            <h3>OPERADORES DE COMPARACIÓN</h3>
+
+            <p class="concept__container--text">
+                <ul>
+                    <li> = → Asigna un valor a una variable</li>
+                    <li> += → Operador de incremento</li>
+                    <li> -= → Operador de decremento</li>
+                    <li> *= → Operador de multiplicación</li>
+                    <li> /= → Operador de división</li>
+                </ul>
+            </p>
+
+            
+
+            <section class="concept_container--social-media">
+                <div><img src="../imagenes/twitter-icon.png" alt="Twitter"><a href="https://twitter.com/octaviocvargas">octaviocvargas</a></div>
+            </section>
+            
+        </section>
+    </section>
+<footer class="footer">
+<a href="/">Términos de uso</a>
+<a href="/">Declaración de privacidad</a>
+<a href="/">Centro de ayuda</a>
+</footer>
+
+  <script src="../js/numeros.js"></script>
+
+</body>
+</html>
