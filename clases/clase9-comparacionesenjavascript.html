@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Clase 2 - VariablesStrings</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="../imagenes/logo-platzimaster.png" alt="Logo">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../imagenes/js.png" alt="User">
+      </div>
+    </div>
+  </header>
+
+  <section class="concept">
+    <section class="concept__container">
+        <h1>COMPARACIONES EN JAVASCRIPT</h1>
+
+        <em>OPERADORES DE COMPARACIÓN</em>
+
+            <p class="concept__container--text">
+                <ul>
+                    <li> == → Compara igualdad de valor</li>
+                    <li> === → Compara igualdad de valor y tipo de dato</li>
+                    <li> != → Evalúa la diferencia de valores</li>
+                    <li> !== → Evalúa la diferencia del valor y tipo de dato</li>
+                    <li> > → Operador mayor que</li>
+                    <li> < → Operador menor que</li>
+                </ul>
+            </p>
+
+            <p class="concept__container--text">Existen varias maneras de comparar variables u objetos de javascript. En primer lugar asignamos X a un valor numérico y Y a un string
+            </p>   
+
+                <code class="concept__container--code">
+                    var x = 4, y = '4' 
+                </code>
+
+            <p class="concept__container--text">x==y -> true lleva los 2 valores a un mismo tipo de dato por ende es igual y verdadero</p>
+
+            <br>
+
+            <p class="concept__container--text">x===y -> false aqui compara los tipos una letra y un número lo cual 2 tipos de variable diferente, por eso el retorno de false</p>
+
+            <br>
+
+            <p class="concept__container--text">Cuando realizamos operaciones es recomendable usar el triple igual  <strong> === </strong> Esto permite que javascript no iguale las variables que son de distinto tipo. RECOMENTACIÓN usarlo siempre que se estén comparando variables.</p>
+
+            <h3>EN OBJETOS</h3>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var persona = {
+                    <br>
+                        &nbsp;  nombre: 'Octavio'
+                    }
+                    <br><br>
+                    var otraPersona = {
+                        <br>
+                            &nbsp;  nombre: 'Octavio'
+                        }
+                </code>
+            </blockquote>
+
+            <p class="concept__container--text">al comparar objetos siempre dará false 
+                <br><br>
+                persona == otrapersona -> false
+                <br>
+                persona === otrapersona -> false
+                <br>
+                a menos que referenciemos el primero asignadolo de la siguiente manera:
+                <br><br>
+                var otrapersona = persona
+                <br>
+                para luego comparar
+                <br>
+                persona === otrapesona -> true 
+                <br><br>
+                
+                ya que es el mismo objeto referenciado tanto para == y === así apuntan a la misma dirección en memoria ram</p>
+                    
+
+            <section class="concept_container--social-media">
+                <div><img src="../imagenes/twitter-icon.png" alt="Twitter"><a href="https://twitter.com/octaviocvargas">octaviocvargas</a></div>
+            </section>
+            
+        </section>
+    </section>
+<footer class="footer">
+<a href="/">Términos de uso</a>
+<a href="/">Declaración de privacidad</a>
+<a href="/">Centro de ayuda</a>
+</footer>
+
+  <script src="../js/clase9-comparacionesenjavascript.js"></script>
+
+</body>
+</html>

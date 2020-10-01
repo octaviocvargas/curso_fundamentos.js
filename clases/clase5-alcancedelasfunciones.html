@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Clase 2 - VariablesStrings</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="../imagenes/logo-platzimaster.png" alt="Logo">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../imagenes/js.png" alt="User">
+      </div>
+    </div>
+  </header>
+
+  <section class="concept">
+    <section class="concept__container">
+        <h2>ALCANCE DE LAS FUNCIONES</h2>
+            <p class="concept__container--text">Hace referencia a cuáles variables puede acceder una funcion y el valor que tienen al momento de invocar la funcion.
+                <br><br>
+                Si una variable no está definida dentro del cuerpo de una función, hablamos de una variable global. Por el contrario, una variable definida dentro de una función es una variable local. 
+                <br><br>
+                Para que la ejecución de una función no modifique una variable global usamos parámetros en lugar de pasar directamente la variable.
+                <br><br>
+                Es posible utilizar el mismo nombre para una variable global y para el parámetro de una función con alcance local.
+                <br><br>
+                Una variable que no está definida dentro del cuerpo de una función, hablamos de una variable de alcance global porque se puede acceder a ella desde cualquier función. También significa que al definirla así, esa variable se le asigna al objeto global y este depende de donde estemos ejecutando <strong>javascript</strong> (servidor entorno node y en el navegador es window la ventana).
+                <br><br>
+                Cuando una función accede a una variable global tiene un efecto de lado (side effects), al invocar una función va a modificar variables que no están definidas dentro de ellas (hay que evitarlo dentro de nuestro código)
+            </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var nombre = 'Octavio'
+                    <br>
+                    <br>
+                    function imprimirNombreEnMayusculas() {
+                        <br>
+                        &nbsp;   nombre = nombre.toUpperCase()
+                        <br>
+                        &nbsp;   console.log(nombre)
+                    }
+                    <br>
+                    <br>
+                    imprimirNombreEnMayusculas()
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Si accedemos a la variable retorta el nombre OCTAVIO (modifica la variable global)</p>
+            
+            <h3>¿CÓMO HACER PARA NO MODIFICAR LA VARIABLE GLOBAL? Usando variables locales</h3>
+
+            <p class="concept__container--text">
+                <ul>
+                    <li>Pasando parametros a la función (n), cambiando nombre por n y así serán variables locales dentro de la función que son parámetros y así estaríamos modificando solo la variable local n y no la global</li>
+                    <li>Tenemos que enviarle este parámetro cuando llamamos la función cuando llamamos a la función | imprimirNombreEnMayusculas(nombre)</li>
+                    <li>Si queremos acceder a la variable n, podemos ver que no está definida, solo está definida dentro de la función.</li>
+                </ul>
+            </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var nombre = 'Octavio'
+                    <br>
+                    <br>
+                    function imprimirNombreEnMayusculas(n) {
+                        <br>
+                        &nbsp;   n = n.toUpperCase()
+                        <br>
+                        &nbsp;   console.log(n)
+                    }
+                    <br>
+                    <br>
+                    imprimirNombreEnMayusculas(nombre)
+                </code>
+            </blockquote> 
+
+            <section class="concept_container--social-media">
+                <div><img src="../imagenes/twitter-icon.png" alt="Twitter"><a href="https://twitter.com/octaviocvargas">octaviocvargas</a></div>
+            </section>
+            
+        </section>
+    </section>
+<footer class="footer">
+<a href="/">Términos de uso</a>
+<a href="/">Declaración de privacidad</a>
+<a href="/">Centro de ayuda</a>
+</footer>
+
+  <script src="../js/clase5-alcancedelasfunciones.js"></script>
+
+</body>
+</html>

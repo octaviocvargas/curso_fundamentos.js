@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Clase 2 - VariablesStrings</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="../imagenes/logo-platzimaster.png" alt="Logo">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="../imagenes/js.png" alt="User">
+      </div>
+    </div>
+  </header>
+
+  <section class="concept">
+    <section class="concept__container">
+        <h2>OBJETOS</h2>
+            <p class="concept__container--text">Un objeto es una estructura de datos que imita las caracteristicas y comportamientos de un concepto de la vida real.
+                <br><br>
+                Los objetos se definen con {} (llaves) para asignarlo a una variable se hace de esta manera var ejemplo = {}
+                <br><br>
+                Los objetos se componen por propiedades y valores, se utiliza ’,' para separar cada propiedad
+            </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var miObjeto = {
+                    <br>
+                        &nbsp;  //propiedad: 'valor'
+                        <br>
+                        &nbsp;  direccion: 'Alguna direccion, caracas, venezuela',
+                        <br>    
+                        &nbsp;   //key:	     'value' (en ingles)
+                        <br>
+                        &nbsp;  codigoPostal: '1020'
+                        <br>
+                    }
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Los objectos pueden recibir como valor en sus propiedades, cadenas de texto (string), valores numericos (int) y booleanos. Tambien puedes realizar operaciones dentro de los valores. Ejemplo:
+            </p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    let objeto2 = {
+                    <br>
+                        &nbsp;  'string' : 'Hola soy una cadena de texto',
+                        <br>
+                        &nbsp;  'int': 123,
+                        <br>
+                        &nbsp;  'boolTrue': true,
+                        <br>
+                        &nbsp;  'boolFalse': false,
+                        <br>
+                        &nbsp;  'sumar': 5+5,
+                        <br>
+                        &nbsp;  'minuscula': 'TEXTO'.toLowerCase()
+                        <br>
+                    }
+                </code>
+            </blockquote> 
+
+            <p class="concept__container--text">Los objetos se pueden enviar por para parámetro a alguna función de esta manera:</p>
+
+            <blockquote>
+                <code class="concept__container--code">
+                    function suma({n1,n2}){
+                    <br>
+                        &nbsp;  var operacion = n1 + n2
+                        <br>
+                        &nbsp;  console.log(operacion)
+                        <br>
+                    }
+                        <br>
+                        <br>
+                        var miSuma = {
+                        <br>
+                        &nbsp;  n1: 5,
+                        <br>
+                        &nbsp;  n2: 10
+                        <br>
+                    }
+                </code>
+            </blockquote> 
+
+            <hr>    
+
+            <blockquote>
+                <code class="concept__container--code">
+                    var octavio = {
+                    <br>
+                        &nbsp;  nombre: 'Octavio',
+                        <br>
+                        &nbsp;  apellido: 'Cuellar',
+                        <br>
+                        &nbsp;  edad: 32
+                        <br>
+                    }
+                    <br><br>
+                    var santiago = {
+                        <br>
+                            &nbsp;  nombre: 'Santiago',
+                            <br>
+                            &nbsp;  apellido: 'Cuellar',
+                            <br>
+                            &nbsp;  edad: 3
+                            <br>
+                        }
+                        <br>
+                        <br>
+                        function imprimirNombreEnMayuscula({ nombre }) {
+                        <br>
+                        &nbsp;  console.log(nombre.toUpperCase())
+                        <br>
+                    }
+                    <br><br>
+                    imprimirNombreEnMayuscula(octavio)
+                    <br>
+                    imprimirNombreEnMayuscula(santiago)
+                </code>
+            </blockquote> 
+
+            <section class="concept_container--social-media">
+                <div><img src="../imagenes/twitter-icon.png" alt="Twitter"><a href="https://twitter.com/octaviocvargas">octaviocvargas</a></div>
+            </section>
+            
+        </section>
+    </section>
+<footer class="footer">
+<a href="/">Términos de uso</a>
+<a href="/">Declaración de privacidad</a>
+<a href="/">Centro de ayuda</a>
+</footer>
+
+  <script src="../js/clase6-objetos.js"></script>
+
+</body>
+</html>
